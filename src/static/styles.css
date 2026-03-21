@@ -19,7 +19,7 @@ header {
   text-align: center;
   padding: 20px 0;
   margin-bottom: 30px;
-  background-color: #1a237e;
+  background: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
   color: white;
   border-radius: 5px;
 }
@@ -106,6 +106,8 @@ button {
 
 button:hover {
   background-color: #3949ab;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .message {

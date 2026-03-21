@@ -48,6 +48,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const email = document.getElementById("email").value;
     const activity = document.getElementById("activity").value;
 
+    // Validate email domain
+    if (!email.endsWith("@mergington.edu")) {
+      messageDiv.textContent = "Please use a valid Mergington High School email (@mergington.edu)";
+      messageDiv.className = "error";
+      messageDiv.classList.remove("hidden");
+      return;
+    }
+
     try {
       const response = await fetch(
         `/activities/${encodeURIComponent(activity)}/signup?email=${encodeURIComponent(email)}`,
