@@ -27,9 +27,29 @@ document.addEventListener("DOMContentLoaded", () => {
           <p><strong>Availability:</strong> ${spotsLeft} spots left</p>
           <p><strong>Participants:</strong></p>
           <ul class="participants-list">
-            ${details.participants.length > 0 ? details.participants.map(p => `<li>${p}</li>`).join('') : '<li>No participants yet</li>'}
+            ${details.participants.length > 0 ? details.participants.map(p => `<li>${p} <span class="delete-icon">×</span></li>`).join('') : '<li>No participants yet</li>'}
           </ul>
         `;
+
+        // Add delete functionality
+        activityCard.addEventListener('click', async (event) => {
+          if (event.target.classList.contains('delete-icon')) {
+            const li = event.target.closest('li');
+            const email = li.textContent.replace('×', '').trim();
+            try {
+              const response = await fetch(`/activities/${encodeURIComponent(name)}/signup?email=${encodeURIComponent(email)}`, {
+                method: 'DELETE'
+              });
+              if (response.ok) {
+                fetchActivities(); // Refresh the activities
+              } else {
+                alert('Failed to unregister participant');
+              }
+            } catch (error) {
+              console.error('Error unregistering:', error);
+            }
+          }
+        });
 
         activitiesList.appendChild(activityCard);
 
