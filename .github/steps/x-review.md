@@ -6,7 +6,7 @@ _Congratulations, you've completed this exercise and learned a lot about GitHub 
 
 Here's a recap of the GitHub Copilot features you learned:
 
-- **Ask Mode**: Used @workspace to explore and understand your codebase
+- **Ask Mode**: Explored your codebase with Copilot
 - **Inline suggestions**: Completed code with Tab acceptance
 - **Inline Chat**: Generated code and data with Ctrl/Cmd + I
 - **Agent Mode**: Built features autonomously
