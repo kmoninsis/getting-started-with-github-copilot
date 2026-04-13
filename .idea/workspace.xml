@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e3bace73-1bb6-429b-800a-12630d1d163c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-    </list>
+    <list default="true" id="e3bace73-1bb6-429b-800a-12630d1d163c" name="Changes" comment="feat: enhance activity management with participant registration and unregistration features" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,6 +48,7 @@
   "keyToString": {
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
@@ -84,12 +82,25 @@
       <option name="presentableId" value="Default" />
       <updated>1776098035616</updated>
       <workItem from="1776098036642" duration="126000" />
-      <workItem from="1776098165103" duration="542000" />
+      <workItem from="1776098165103" duration="874000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: enhance activity management with participant registration and unregistration features">
+      <option name="closed" value="true" />
+      <created>1776099014597</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1776099014597</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: enhance activity management with participant registration and unregistration features" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: enhance activity management with participant registration and unregistration features" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
