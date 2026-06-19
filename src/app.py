@@ -25,20 +25,47 @@ activities = {
         "description": "Learn strategies and compete in chess tournaments",
         "schedule": "Fridays, 3:30 PM - 5:00 PM",
         "max_participants": 12,
-        "participants": ["michael@mergington.edu", "daniel@mergington.edu"]
+        "participants": [
+            {"name": "Michael Chen", "email": "michael@mergington.edu"},
+            {"name": "Daniel Smith", "email": "daniel@mergington.edu"}
+        ]
     },
     "Programming Class": {
         "description": "Learn programming fundamentals and build software projects",
         "schedule": "Tuesdays and Thursdays, 3:30 PM - 4:30 PM",
         "max_participants": 20,
-        "participants": ["emma@mergington.edu", "sophia@mergington.edu"]
+        "participants": [
+            {"name": "Emma Johnson", "email": "emma@mergington.edu"},
+            {"name": "Sophia Rodriguez", "email": "sophia@mergington.edu"}
+        ]
     },
     "Gym Class": {
         "description": "Physical education and sports activities",
         "schedule": "Mondays, Wednesdays, Fridays, 2:00 PM - 3:00 PM",
         "max_participants": 30,
-        "participants": ["john@mergington.edu", "olivia@mergington.edu"]
+        "participants": [
+            {"name": "John Williams", "email": "john@mergington.edu"},
+            {"name": "Olivia Brown", "email": "olivia@mergington.edu"}
+        ]
+    },
+    "Art Club": {
+        "description": "Explore various art techniques and create your own masterpieces",
+        "schedule": "Wednesdays, 3:30 PM - 5:00 PM",
+        "max_participants": 15,
+        "participants": [
+            {"name": "Ava Davis", "email": "max123@gmail.com"}
+        ]
+    },
+    "Cricket Club": {
+        "description": "Learn and play cricket with fellow enthusiasts",
+        "schedule": "Saturdays, 10:00 AM - 12:00 PM",
+        "max_participants": 15,
+        "participants": [
+            {"name": "Liam Davis", "email": "liam@mergington.edu"},
+            {"name": "Ava Martinez", "email": "ava@mergington.edu"}
+        ]
     }
+
 }
 
 
@@ -53,7 +80,7 @@ def get_activities():
 
 
 @app.post("/activities/{activity_name}/signup")
-def signup_for_activity(activity_name: str, email: str):
+def signup_for_activity(activity_name: str, name: str, email: str):
     """Sign up a student for an activity"""
     # Validate activity exists
     if activity_name not in activities:
@@ -62,6 +89,6 @@ def signup_for_activity(activity_name: str, email: str):
     # Get the specific activity
     activity = activities[activity_name]
 
-    # Add student
-    activity["participants"].append(email)
-    return {"message": f"Signed up {email} for {activity_name}"}
+    # Add student with name and email
+    activity["participants"].append({"name": name, "email": email})
+    return {"message": f"Signed up {name} ({email}) for {activity_name}"}
